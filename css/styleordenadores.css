@@ -1,0 +1,220 @@
+:root {
+    --navy: #1e1e4f;
+    --red-price: #ff3333;
+    --light-gray: #f9f9f9;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Nav */
+.main-header {
+    background-color: var(--navy);
+    color: white;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-bar input {
+    width: 400px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+}
+
+.btn-white {
+    background: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.nav-bar {
+    background-color: #2a2a6d;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Grid de Productos */
+.section-intro {
+    margin: 40px 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    transition: 0.3s;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h4 {
+    font-size: 0.9rem;
+    margin: 10px 0;
+    height: 40px;
+    overflow: hidden;
+}
+
+.price {
+    color: var(--red-price);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Redes Sociales */
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-item img {
+    width: 18px;
+    height: 18px;
+    filter: grayscale(100%);
+}
+
+/* Premios y Pagos */
+.footer-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.awards {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.awards img {
+    height: 30px;
+    opacity: 0.7;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.payment-methods img {
+    height: 20px;
+    width: auto;
+}
+
+@media (max-width: 600px) {
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-right {
+        align-items: center;
+    }
+}
