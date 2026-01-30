@@ -1,0 +1,216 @@
+:root {
+    --navy: #1e1e4f;
+    --red: #e60000;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding-bottom: 100px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.main-header {
+    background: var(--navy);
+    color: white;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-bar input {
+    width: 350px;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+.btn-nav {
+    background: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Menu Desplegable */
+.nav-categories {
+    background: #2a2a68;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Product Grid */
+.page-intro {
+    margin: 30px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.product-card {
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    font-size: 0.9rem;
+    margin: 10px 0;
+    color: #444;
+}
+
+.price {
+    color: var(--red);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Redes Sociales */
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-item img {
+    width: 18px;
+    height: 18px;
+    filter: grayscale(100%);
+}
+
+/* Premios y Pagos */
+.footer-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.awards {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.awards img {
+    height: 30px;
+    opacity: 0.7;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.payment-methods img {
+    height: 20px;
+    width: auto;
+}
+
+
+/* Responsive Móvil */
+@media (max-width: 600px) {
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-right {
+        align-items: center;
+    }
+}
