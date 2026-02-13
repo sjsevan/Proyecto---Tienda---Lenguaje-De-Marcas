@@ -8,19 +8,17 @@
 </head>
 <body>
 
-    <header class="main-header">
+     <header class="main-header">
         <div class="container header-top">
             <div class="logo">
-                <div class="logo-icon"><span>NEOPC</span></div>
+                <img src="imagenes/logo.png" alt="NeoPC">
             </div>
-            
-            <div class="search-container">
-                <input type="text" placeholder="Buscar..." class="search-input">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
             </div>
-
-            <div class="header-buttons">
-                <button class="btn-secondary">Iniciar sesión</button>
-                <button class="btn-secondary">Mi carrito 🛒</button>
+            <div class="user-menu">
+                <button class="btn-white">Iniciar sesión</button>
+                <button id="boton-abrir-carrito" class="btn-white">🛒 Mi carrito (<span id="cuenta-carrito">0</span>)</button>
             </div>
         </div>
 
@@ -34,7 +32,6 @@
                         <a href="consolas.html">Consolas</a>
                         <a href="ordenadores.html">Ordenadores</a>
                         <a href="moviles-tablets.html">Móviles / Tablets</a>
-                        
                     </div>
                 </div>
             </div>
@@ -42,57 +39,72 @@
     </header>
 
     <main class="container">
-        <section class="catalog-header">
+        <section class="section-intro">
             <h1>Móviles y tablets</h1>
-            <p class="tagline">"¿No encuentras el smartphone o tablet que buscas? Lo conseguimos por ti."</p>
-            <p class="description">Contamos con un amplio catálogo de dispositivos de última generación listos para envío inmediato.</p>
+            <h3>"¿No encuentras el smartphone o tablet que buscas? Lo conseguimos por ti."</h3>
+            <p>Contamos con un amplio catálogo de dispositivos de última generación listos para envío inmediato.</p>
         </section>
 
-        <div class="product-grid">
+       <div class="products-grid">
             <div class="product-card">
                 <img src="imagenes/1703-logitech-mk540-advanced-combo-teclado-inalambrico-raton-a44045eb-d235-47d3-bec8-40f84eaa821e.webp" alt="Apple iPhone 17">
-                <h4>Logitech MK540 Advanced Combo Teclado y Ratón Inalámbrico Receptor USB Unificador y Batería 3 Años</h4>
+                <h4>Logitech MK540 Advanced Combo Teclado y Ratón Inalámbrico</h4>
                 <p class="price">49,95 €</p>
+                <button class="boton-add" data-id="peri-logi-mk540" data-nombre="Logitech MK540 Combo" data-precio="49.95">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1598-creative-live-cam-sync-1080p-v2-webcam-usb.webp" alt="GeForce RTX 5060">
                 <h4>Creative Live CAM Sync 1080p V2 Webcam USB</h4>
                 <p class="price">30 €</p>
+                <button class="boton-add" data-id="peri-creative-cam" data-nombre="Webcam Creative Live Sync" data-precio="30.00">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1442-newskill-eros-silla-gaming-con-malla-ergonomica-azul.webp" alt="PS5 Slim">
                 <h4>Newskill Eros Silla Gaming con Malla Ergonómica Azul</h4>
                 <p class="price">139 €</p>
+                <button class="boton-add" data-id="peri-silla-newskill" data-nombre="Silla Gaming Newskill Eros" data-precio="139.00">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1255-logitech-g-pro-x-auriculares-gaming-inalambricos-con-lightspeed-negros-4b21b7d7-73fb-440a-a783-7c7be9fcb2ee.webp" alt="RAM Fury">
-                <h4>Logitech G Pro X Auriculares Gaming Inalámbricos con Lightspeed Negros</h4>
+                <h4>Logitech G Pro X Auriculares Gaming Inalámbricos</h4>
                 <p class="price">140,34 €</p>
+                <button class="boton-add" data-id="peri-logi-gprox-headset" data-nombre="Logitech G Pro X Headset" data-precio="140.34">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1781-logitech-g29-driving-force-para-ps5-ps4-ps3-pc-compatible-con-f1-23-gran-turismo-7-volante-09aa6f5d-2cf0-44c6-919d-22ebb3b289a8.webp" alt="Monitor AOC">
                 <h4>Logitech G29 Driving Force Volante para PS5/PS4/PS3/PC</h4>
                 <p class="price">229,99 €</p>
+                <button class="boton-add" data-id="peri-logi-g29" data-nombre="Volante Logitech G29" data-precio="229.99">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1670-all-in-one-alurin-flow-aio-i5-12400-24-32gb-1tb-comprar.webp" alt="Monitor AOC">
-                <h4>Monitor PcCom Elysium Pro 32" LED QHD 165Hz FreeSync Curva</h4>
+                <h4>Monitor PcCom Elysium Pro 32" LED QHD 165Hz Curva</h4>
                 <p class="price">209,99 €</p>
+                <button class="boton-add" data-id="peri-pccom-elysium" data-nombre="Monitor PcCom Elysium 32" data-precio="209.99">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1442-forgeon-battleground-mesa-gaming-regulable-en-altura-con-motor-140x70cm-rgb-negra-2a4ef893-83f3-473c-8765-9b5f86469d4b.webp" alt="Monitor AOC">
-                <h4>Forgeon Battleground Mesa Gaming Regulable en Altura con Motor 140x70cm RGB Negra</h4>
+                <h4>Forgeon Battleground Mesa Gaming Regulable RGB</h4>
                 <p class="price">289,99 €</p>
+                <button class="boton-add" data-id="peri-mesa-forgeon" data-nombre="Mesa Forgeon Battleground" data-precio="289.99">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1561-owlotech-mousepad-90x40cm-2mm-alfombrilla-basic-extended-negra-comprar.webp" alt="Monitor AOC">
-                <h4>Owlotech Mousepad 90x40cm 2mm Alfombrilla Basic Extended Negra</h4>
+                <h4>Owlotech Mousepad 90x40cm Alfombrilla Extended</h4>
                 <p class="price">9,99 €</p>
+                <button class="boton-add" data-id="peri-owlotech-pad" data-nombre="Alfombrilla Owlotech 90x40" data-precio="9.99">Añadir al carrito</button>
             </div>
         </div>
-    </main>
+</main>
 
-    <footer class="site-footer">
+<footer class="site-footer">
     <div class="container footer-grid">
         <div class="footer-socials">
             <div class="social-item">
@@ -128,6 +140,17 @@
         </div>
     </div>
 </footer>
-
+<div id="modal-carrito" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Tu Carrito</h2>
+        <div id="lista-carrito"></div>
+        <div class="carrito-total">
+            <p>Total: <strong id="precio-total">0</strong> €</p>
+        </div>
+        <button class="btn-pagar">Finalizar Compra</button>
+    </div>
+</div>
+<script src="carrito.js"></script>
 </body>
 </html>

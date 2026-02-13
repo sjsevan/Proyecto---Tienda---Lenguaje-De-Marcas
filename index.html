@@ -10,7 +10,7 @@
 
     <header class="main-header">
         <div class="header-top container">
-            <div class="logo"><a href="index.html">NEOPC</a>
+            <div class="logo">NEOPC Tienda Informatica
             </div>
             
             <div class="search-bar">
@@ -19,7 +19,7 @@
 
             <div class="user-actions">
                 <button class="btn-text">Iniciar sesión</button>
-                <button class="btn-cart">🛒 Mi carrito</button>
+                <button id="boton-abrir-carrito" class="btn-white">🛒 Mi carrito (<span id="cuenta-carrito">0</span>)</button>
             </div>
         </div>
 
@@ -121,4 +121,16 @@
         </div>
     </div>
 </footer>
+<div id="modal-carrito" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Tu Carrito</h2>
+        <div id="lista-carrito"></div>
+        <div class="carrito-total">
+            <p>Total: <strong id="precio-total">0</strong> €</p>
+        </div>
+        <button class="btn-pagar">Finalizar Compra</button>
+    </div>
+</div>
+<script src="carrito.js"></script>
 </html>

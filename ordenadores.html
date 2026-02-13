@@ -11,14 +11,14 @@
     <header class="main-header">
         <div class="container header-top">
             <div class="logo">
-                <img src="logo-neopc.png" alt="NeoPC">
+                <img src="imagenes/logo.png" alt="NeoPC">
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="Buscar productos...">
             </div>
             <div class="user-menu">
                 <button class="btn-white">Iniciar sesión</button>
-                <button class="btn-white">Mi carrito 🛒</button>
+                <button id="boton-abrir-carrito" class="btn-white">🛒 Mi carrito (<span id="cuenta-carrito">0</span>)</button>
             </div>
         </div>
 
@@ -48,43 +48,58 @@
         <div class="products-grid">
             <div class="product-card">
                 <img src="imagenes/1149-pccom-revolt-5070-intel-core-i7-14650hx-16-qhd-32gb-1tb-windows-11-home-v2.webp" alt="RTX 5060">
-                <h4>Portátil PcCom Revolt 5070 Intel Core i7-14650HX 16"/QHD /32GB/1TB/Windows 11 Home</h4>
+                <h4>Portátil PcCom Revolt 5070 Intel Core i7-14650HX</h4>
                 <p class="price">1599,99 €</p>
+                <button class="boton-add" data-id="pc-revolt-5070" data-nombre="Portátil PcCom Revolt 5070" data-precio="1599.99">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1756-lenovo-ideapad-slim-3-15irh8-intel-core-i5-13420h-16gb-1tb-ssd-156-win-11-foto.webp" alt="RAM Kingston">
-                <h4>Portátil Lenovo IdeaPad Slim 3 15IRH8 Intel Core i5-13420H/16GB/1TB SSD/15.6" + WIN 11</h4>
+                <h4>Portátil Lenovo IdeaPad Slim 3 15IRH8</h4>
                 <p class="price">599 €</p>
+                <button class="boton-add" data-id="lenovo-ideapad-slim3" data-nombre="Lenovo IdeaPad Slim 3" data-precio="599.00">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1751-pccom-ready-amd-ryzen-7-5800x-32gb-1tb-ssd-rtx-5060-ti-16gb-v2-windows-11-home-comprar.webp" alt="RAM Kingston">
-                <h4>PcCom Ready V2 AMD Ryzen 7 5800X / 32GB / 1TB SSD / RTX 5060 Ti 16GB + Windows 11 Home</h4>
+                <h4>PcCom Ready V2 AMD Ryzen 7 5800X / RTX 5060 Ti</h4>
                 <p class="price">1699 €</p>
+                <button class="boton-add" data-id="pccom-ready-v2" data-nombre="PcCom Ready V2 Ryzen 7" data-precio="1699.00">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/156-pccom-ready-amd-ryzen-7-5800x-32gb-1tb-ssd-rtx-5060-blanco-windows-11-home-comprar.jpg" alt="RAM Kingston">
-                <h4>PcCom Ready AMD Ryzen 7 5800X / 32GB / 1TB SSD / RTX 5060 Blanco + Windows 11 Home</h4>
+                <h4>PcCom Ready AMD Ryzen 7 5800X / RTX 5060 Blanco</h4>
                 <p class="price">1369 €</p>
+                <button class="boton-add" data-id="pccom-ready-white" data-nombre="PcCom Ready Blanco Ryzen 7" data-precio="1369.00">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1483-hp-all-in-one-27-cr0069ns-intel-core-i5-1335u-16gb-512gb-ssd-27.webp" alt="RAM Kingston">
-                <h4>HP All-in-One 27-cr0069ns Intel Core i5-1335U/16GB/512GB SSD/27</h4>
+                <h4>HP All-in-One 27-cr0069ns Intel Core i5</h4>
                 <p class="price">709 €</p>
+                <button class="boton-add" data-id="hp-aio-27" data-nombre="HP All-in-One 27-cr0069ns" data-precio="709.00">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1670-all-in-one-alurin-flow-aio-i5-12400-24-32gb-1tb-comprar.webp" alt="RAM Kingston">
-                <h4>All in one Alurin Flow AIO i5-12400/32GB/1TB SSD/24</h4>
+                <h4>All in one Alurin Flow AIO i5-12400</h4>
                 <p class="price">644,99 €</p>
+                <button class="boton-add" data-id="alurin-flow-aio" data-nombre="Alurin Flow AIO i5" data-precio="644.99">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1340-blackview-mp20-mini-pc-amd-ryzen-3-3300u-8gb-256gb-ssd-windows-11-pro-negro-especificaciones.webp" alt="RAM Kingston">
-                <h4>Blackview MP20 Mini PC AMD Ryzen 3 3300U 8GB+256GB SSD Windows 11 Pro, Negro</h4>
+                <h4>Blackview MP20 Mini PC AMD Ryzen 3</h4>
                 <p class="price">219 €</p>
+                <button class="boton-add" data-id="blackview-mp20" data-nombre="Blackview MP20 Mini PC" data-precio="219.00">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1509-blackview-mp60-mini-pc-intel-n150-16gb-512gb-ssd-windows-11-pro-negro.webp" alt="RAM Kingston">
-                <h4>Blackview MP60 Mini PC Intel N150/16GB/512GB SSD/Windows 11 Pro Negro</h4>
+                <h4>Blackview MP60 Mini PC Intel N150</h4>
                 <p class="price">279 €</p>
+                <button class="boton-add" data-id="blackview-mp60" data-nombre="Blackview MP60 Mini PC" data-precio="279.00">Añadir al carrito</button>
             </div>
         </div>
 
@@ -126,6 +141,17 @@
         </div>
     </div>
 </footer>
-
+<div id="modal-carrito" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Tu Carrito</h2>
+        <div id="lista-carrito"></div>
+        <div class="carrito-total">
+            <p>Total: <strong id="precio-total">0</strong> €</p>
+        </div>
+        <button class="btn-pagar">Finalizar Compra</button>
+    </div>
+</div>
+<script src="carrito.js"></script>
 </body>
 </html>

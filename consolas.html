@@ -10,16 +10,19 @@
 
     <header class="main-header">
         <div class="container header-top">
-            <div class="logo">NEOPC</div>
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="NeoPC">
             </div>
-            <div class="auth-cart">
-                <button class="btn-nav">Iniciar sesión</button>
-                <button class="btn-nav">🛒 Mi carrito</button>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+            </div>
+            <div class="user-menu">
+                <button class="btn-white">Iniciar sesión</button>
+                <button id="boton-abrir-carrito" class="btn-white">🛒 Mi carrito (<span id="cuenta-carrito">0</span>)</button>
             </div>
         </div>
-        <nav class="nav-categories">
+
+        <nav class="nav-bar">
             <div class="container">
                 <div class="dropdown">
                     <button class="dropbtn">☰ Todas las categorías</button>
@@ -36,56 +39,70 @@
     </header>
 
     <main class="container">
-        <section class="page-intro">
-            <h1>Componentes / Consolas</h1>
+        <section class="section-intro">
+            <h1>Consolas</h1>
+            <h3>¿No encuentras el componente que necesitas?</h3>
             <p>Disponemos de una amplia variedad de stock listo para envío inmediato. Si no encuentras lo que buscas, contáctanos y te facilitamos presupuesto al momento.</p>
         </section>
 
-        <div class="product-grid">
+        <div class="products-grid">
             <div class="product-card">
                 <img src="imagenes/1144-microsoft-xbox-series-s-512gb.webp" alt="xbox">
                 <h3>Microsoft Xbox Series S 512GB Blanca</h3>
                 <p class="price">255,90 €</p>
+                <button class="boton-add" data-id="xbox-series-s-512" data-nombre="Xbox Series S 512GB" data-precio="255.90">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1355-a-plague-tale-innocence-xbox-series-x-one.webp" alt="PS5">
                 <h3>A Plague Tale: Innocence Xbox Series X/One</h3>
                 <p class="price">28 €</p>
+                <button class="boton-add" data-id="game-plague-tale" data-nombre="A Plague Tale: Innocence" data-precio="28.00">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1629-nintendo-switch-2-79-fullhd-hdr-120hz-256gb-magnetic-joy-con-modo-raton-azul-rojo.webp" alt="PS5">
-                <h3>Nintendo Switch 2 7.9" FullHD HDR 120Hz 256GB Magnetic Joy-Con Modo Ratón Azul/Rojo</h3>
+                <h3>Nintendo Switch 2 7.9" FullHD HDR 120Hz 256GB</h3>
                 <p class="price">465 €</p>
+                <button class="boton-add" data-id="nintendo-switch-2" data-nombre="Nintendo Switch 2 256GB" data-precio="465.00">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1934-split-fiction-code-in-a-box-nintendo-switch-2.webp" alt="PS5">
-                <h3>Juegos Nintendo Switch 2 Split Fiction Code In a Box Nintendo Switch 2</h3>
+                <h3>Split Fiction Code In a Box Nintendo Switch 2</h3>
                 <p class="price">44,99 €</p>
+                <button class="boton-add" data-id="game-split-fiction" data-nombre="Split Fiction (Switch 2)" data-precio="44.99">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1719-sony-playstation-5-slim-chasis-e-2x-mandos-dualsense-v3.webp" alt="PS5">
-                <h3>Sony PlayStation 5 Slim Chasis E + 2x Mandos DualSense V3</h3>
+                <h3>Sony PlayStation 5 Slim + 2x Mandos DualSense V3</h3>
                 <p class="price">599 €</p>
+                <button class="boton-add" data-id="ps5-slim-2mandos" data-nombre="PS5 Slim + 2 Mandos V3" data-precio="599.00">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1227-the-last-of-us-part-i-ps5-foto.webp" alt="PS5">
                 <h3>The Last Of Us Part I PS5</h3>
                 <p class="price">47,39 €</p>
+                <button class="boton-add" data-id="game-tlou-part1" data-nombre="The Last Of Us Part I (PS5)" data-precio="47.39">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1525-sony-dualsense-chroma-indigo-mando-inalambrico-para-ps5.webp" alt="PS5">
-                <h3>Sony DualSense Chroma Indigo Mando Inalámbrico para PS5</h3>
+                <h3>Sony DualSense Chroma Indigo PS5</h3>
                 <p class="price">47,99 €</p>
+                <button class="boton-add" data-id="mando-dualsense-indigo" data-nombre="Mando DualSense Indigo" data-precio="47.99">Añadir al carrito</button>
             </div>
+
             <div class="product-card">
                 <img src="imagenes/1962-consola-portatil-lenovo-legion-go-2-amd-ryzen-z2-extreme-32gb-1tb-oled-88-784d29db-b1cd-429e-bd14-635d4a8b15ff.webp" alt="PS5">
-                <h3>Consola portátil Lenovo Legion Go 2 AMD Ryzen Z2 Extreme 32GB 1TB OLED 8.8"</h3>
+                <h3>Consola portátil Lenovo Legion Go 2 OLED 8.8"</h3>
                 <p class="price">1299 €</p>
+                <button class="boton-add" data-id="lenovo-legion-go-2" data-nombre="Lenovo Legion Go 2" data-precio="1299.00">Añadir al carrito</button>
             </div>
-        
         </div>
 
-       
     </main>
 
     <footer class="site-footer">
@@ -124,6 +141,17 @@
         </div>
     </div>
 </footer>
-
+<div id="modal-carrito" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Tu Carrito</h2>
+        <div id="lista-carrito"></div>
+        <div class="carrito-total">
+            <p>Total: <strong id="precio-total">0</strong> €</p>
+        </div>
+        <button class="btn-pagar">Finalizar Compra</button>
+    </div>
+</div>
+<script src="carrito.js"></script>
 </body>
 </html>

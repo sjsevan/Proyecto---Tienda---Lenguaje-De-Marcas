@@ -9,17 +9,16 @@
 <body>
 
     <header class="main-header">
-        <div class="container header-grid">
-            <div class="logo"><a href="index.html">NEOPC</a></div>
-            
-            
-            <div class="search-box">
-                <input type="text" placeholder="Buscar...">
+        <div class="container header-top">
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="NeoPC">
             </div>
-
-            <div class="header-btns">
-                <button class="btn-secondary">Iniciar sesión</button>
-                <button class="btn-secondary">🛒 Mi carrito</button>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+            </div>
+            <div class="user-menu">
+                <button class="btn-white">Iniciar sesión</button>
+                <button id="boton-abrir-carrito" class="btn-white">🛒 Mi carrito (<span id="cuenta-carrito">0</span>)</button>
             </div>
         </div>
 
@@ -40,60 +39,69 @@
     </header>
 
     <main class="container">
-        <section class="intro">
+        <section class="section-intro">
             <h1>Componentes</h1>
             <h3>¿No encuentras el componente que necesitas?</h3>
             <p>Nosotros lo conseguimos. Contamos con un amplio stock de componentes disponibles para entrega inmediata. Si no aparece en esta sección, escríbenos sin compromiso.</p>
         </section>
 
-        <div class="product-grid">
-            <div class="product-item">
+        <div class="products-grid">
+            <div class="product-card">
                 <img src="imagenes/1103-tarjeta-grafica-gigabyte-geforce-rtx-5070.webp" alt="GPU">
                 <h4>Tarjeta Gráfica Gigabyte GeForce RTX 5070 Ti WINDFORCE OC V2 16GB GDDR7 Reflex 2 RTX AI DLSS4</h4>
                 <p class="price">949,90 €</p>
+                <button class="boton-add" data-id="gpu-5070ti-gb" data-nombre="RTX 5070 Ti Gigabyte" data-precio="949.90">Añadir al carrito</button>
             </div>
             
-            <div class="product-item">
+            <div class="product-card">
                 <img src="imagenes/127-msi-geforce-rtx-5060.webp" alt="GPU">
                 <h4>Tarjeta Gráfica MSI GeForce RTX 5060 VENTUS 2X OC 8GB GDDR7 Reflex 2 RTX AI DLSS4</h4>
                 <p class="price">325,99 €</p>
+                <button class="boton-add" data-id="gpu-5060-msi" data-nombre="RTX 5060 MSI Ventus" data-precio="325.99">Añadir al carrito</button>
             </div>
 
-            <div class="product-item">
+            <div class="product-card">
                 <img src="imagenes/1992-msi-geforce-rtx-5070.webp" alt="CPU">
                 <h4>Tarjeta Gráfica MSI GeForce RTX 5070 Ti GAMING TRIO OC 16GB GDDR7 Reflex 2 RTX AI DLSS4</h4>
                 <p class="price">1187,95 €</p>
+                <button class="boton-add" data-id="gpu-5070ti-msi-trio" data-nombre="RTX 5070 Ti MSI Trio" data-precio="1187.95">Añadir al carrito</button>
             </div>
 
-            <div class="product-item">
+            <div class="product-card">
                 <img src="imagenes/1867-kingston-nv3-1tb.webp" alt="SSD">
                 <h4>Disco Duro Kingston NV3 1TB Disco SSD 6000MB/S NVMe PCIe 4.0 M.2 Gen4 2280 3D Nand</h4>
                 <p class="price">159,95 €</p>
+                <button class="boton-add" data-id="ssd-kingston-1tb" data-nombre="SSD Kingston NV3 1TB" data-precio="159.95">Añadir al carrito</button>
             </div>
 
-            <div class="product-item">
+            <div class="product-card">
                 <img src="imagenes/1500-amd-ryzen-7-7800x3d.webp" alt="PSU">
                 <h4>Procesador AMD Ryzen 7 7800X3D 4.2 GHz/5 GHz</h4>
                 <p class="price">399,90 €</p>
+                <button class="boton-add" data-id="cpu-ryzen-7800x3d" data-nombre="AMD Ryzen 7 7800X3D" data-precio="399.90">Añadir al carrito</button>
             </div>
-            <div class="product-item">
+
+            <div class="product-card">
                 <img src="imagenes/1969-inno3d-geforce-rtx-5070.webp" alt="PSU">
                 <h4>Tarjeta Gráfica Inno3D GeForce RTX 5070 TWIN X2 12GB GDDR7 Reflex 2 RTX AI DLSS4</h4>
                 <p class="price">579,90 €</p>
+                <button class="boton-add" data-id="gpu-5070-inno3d" data-nombre="RTX 5070 Inno3D" data-precio="579.90">Añadir al carrito</button>
             </div>
-            <div class="product-item">
+
+            <div class="product-card">
                 <img src="imagenes/1823-tarjeta-grafica-palit-geforce-rtx-5070-ti-gamingpro-s-16gb-gddr7-256bit.webp" alt="PSU">
                 <h4>Tarjeta gráfica Palit GeForce RTX 5070 Ti GamingPro-S 16GB GDDR7 Reflex 2 RTX AI DLSS4</h4>
                 <p class="price">874,90 €</p>
+                <button class="boton-add" data-id="gpu-5070ti-palit" data-nombre="RTX 5070 Ti Palit" data-precio="874.90">Añadir al carrito</button>
             </div>
-            <div class="product-item">
+
+            <div class="product-card">
                 <img src="imagenes/1149-gigabyte-geforce-rtx-5060.webp" alt="PSU">
                 <h4>Tarjeta Gráfica Gigabyte GeForce RTX 5060 WINDFORCE OC 8GB GDDR7 Reflex 2 RTX AI DLSS4</h4>
                 <p class="price">332,47 €</p>
+                <button class="boton-add" data-id="gpu-5060-gb" data-nombre="RTX 5060 Gigabyte" data-precio="332.47">Añadir al carrito</button>
             </div>
         </div>
-
-       
     </main>
 
 <footer class="site-footer">
@@ -132,5 +140,17 @@
         </div>
     </div>
 </footer>
+<div id="modal-carrito" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Tu Carrito</h2>
+        <div id="lista-carrito"></div>
+        <div class="carrito-total">
+            <p>Total: <strong id="precio-total">0</strong> €</p>
+        </div>
+        <button class="btn-pagar">Finalizar Compra</button>
+    </div>
+</div>
+<script src="carrito.js"></script>
 </body>
 </html>

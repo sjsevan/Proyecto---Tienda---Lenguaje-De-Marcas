@@ -9,14 +9,16 @@
 <body>
 
     <header class="main-header">
-        <div class="container header-flex">
-            <div class="logo">NEOPC</div>
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
+        <div class="container header-top">
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="NeoPC">
             </div>
-            <div class="header-actions">
-                <button class="btn-nav">Iniciar sesión</button>
-                <button class="btn-nav">Mi carrito 🛒</button>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+            </div>
+            <div class="user-menu">
+                <button class="btn-white">Iniciar sesión</button>
+                <button id="boton-abrir-carrito" class="btn-white">🛒 Mi carrito (<span id="cuenta-carrito">0</span>)</button>
             </div>
         </div>
 
@@ -38,54 +40,67 @@
 
     <main class="container">
         <section class="catalog-section">
-            <h1 class="section-title">Moviles y tablets</h1>
-            <p class="section-subtitle">"¿No encuentras el smartphone o tablet que buscas? Lo conseguimos por ti."</p>
-            <p class="section-description">Contamos con un amplio catálogo de dispositivos de última generación listos para envío inmediato.</p>
-
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="imagenes/1383-apple-iphone-17-pro-256gb-azul-oscuro.webp" alt="Apple iPhone 17">
-                    <h4>Apple iPhone 17 Pro 256GB Azul Oscuro</h4>
-                    <p class="price">1289 €</p>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/1892-apple-iphone-17-256gb-azul-neblina.webp" alt="Xiaomi Redmi">
-                    <h4>Apple iPhone 17 256GB Azul Neblina</h4>
-                    <p class="price">939 €</p>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/1210-xiaomi-redmi-note-14-pro-5g-8-256gb-negro-medianoche-libre.webp" alt="PC Gaming">
-                    <h4>Xiaomi Redmi Note 14 Pro 5G 8/256GB Negro Medianoche </h4>
-                    <p class="price">297 €</p>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/159-apple-iphone-15-128gb-azul-libre-comprar.webp" alt="PC Gaming">
-                    <h4>Apple iPhone 15 128GB Azul</h4>
-                    <p class="price">639 €</p>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/1601-tablet-samsung-galaxy-tab-a11-plus-wifi-11-128gb-bateria-de-larga-duracion-7040mah-gris.webp" alt="PC Gaming">
-                    <h4>Tablet Samsung Galaxy Tab A11 Plus WiFi 11" 128GB batería de larga duración 7040mAh Gris</h4>
-                    <p class="price">194,99 €</p>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/1628-tablet-lenovo-idea-tab-11-25k-ips-8gb-128gb-wifi-7040mah-android-15-gris-con-tab-pen.webp" alt="PC Gaming">
-                    <h4>Tablet Lenovo Idea Tab 11" 2.5K IPS 8GB 128GB WiFi 7040mAh Android 15 Gris con Tab Pen</h4>
-                    <p class="price">169 €</p>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/1609-acer-tab-v11-tablet-11-2k-6gb-256gb-20w-8000mah-wifi-ac-and14-funda-champagne-comprar.webp" alt="PC Gaming">
-                    <h4>Acer Tab V11 Tablet 11" 2K 6GB/256GB 20W 8000mAh WiFi AC AND14 + Funda Champagne</h4>
-                    <p class="price">159,99 €</p>
-                </div>
-                <div class="product-card">
-                    <img src="imagenes/1596-tablet-xiaomi-redmi-pad-2-11-4gb-128gb-wifi-hyperos-verde-menta-ring-holder-7ab85eb1-fe54-428a-9fe8-8090878dc91d.webp" alt="PC Gaming">
-                    <h4>Tablet Xiaomi Redmi Pad 2 11" 4GB 128GB WiFi HyperOS Verde Menta + Ring Holder</h4>
-                    <p class="price">139 €</p>
-                </div>
-            
-            </div>
+            <h1>Moviles y tablets</h1>
+            <h3>"¿No encuentras el smartphone o tablet que buscas? Lo conseguimos por ti."</h3>
+            <p>Contamos con un amplio catálogo de dispositivos de última generación listos para envío inmediato.</p>
         </section>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="imagenes/1383-apple-iphone-17-pro-256gb-azul-oscuro.webp" alt="Apple iPhone 17">
+                <h4>Apple iPhone 17 Pro 256GB Azul Oscuro</h4>
+                <p class="price">1289 €</p>
+                <button class="boton-add" data-id="mov-iphone-17-pro" data-nombre="iPhone 17 Pro 256GB" data-precio="1289.00">Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="imagenes/1892-apple-iphone-17-256gb-azul-neblina.webp" alt="Xiaomi Redmi">
+                <h4>Apple iPhone 17 256GB Azul Neblina</h4>
+                <p class="price">939 €</p>
+                <button class="boton-add" data-id="mov-iphone-17" data-nombre="iPhone 17 256GB" data-precio="939.00">Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="imagenes/1210-xiaomi-redmi-note-14-pro-5g-8-256gb-negro-medianoche-libre.webp" alt="PC Gaming">
+                <h4>Xiaomi Redmi Note 14 Pro 5G 8/256GB</h4>
+                <p class="price">297 €</p>
+                <button class="boton-add" data-id="mov-xiaomi-rn14-pro" data-nombre="Xiaomi Redmi Note 14 Pro" data-precio="297.00">Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="imagenes/159-apple-iphone-15-128gb-azul-libre-comprar.webp" alt="PC Gaming">
+                <h4>Apple iPhone 15 128GB Azul</h4>
+                <p class="price">639 €</p>
+                <button class="boton-add" data-id="mov-iphone-15-128" data-nombre="iPhone 15 128GB" data-precio="639.00">Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="imagenes/1601-tablet-samsung-galaxy-tab-a11-plus-wifi-11-128gb-bateria-de-larga-duracion-7040mah-gris.webp" alt="PC Gaming">
+                <h4>Tablet Samsung Galaxy Tab A11 Plus WiFi</h4>
+                <p class="price">194,99 €</p>
+                <button class="boton-add" data-id="tab-samsung-a11-plus" data-nombre="Samsung Tab A11 Plus" data-precio="194.99">Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="imagenes/1628-tablet-lenovo-idea-tab-11-25k-ips-8gb-128gb-wifi-7040mah-android-15-gris-con-tab-pen.webp" alt="PC Gaming">
+                <h4>Tablet Lenovo Idea Tab 11" + Tab Pen</h4>
+                <p class="price">169 €</p>
+                <button class="boton-add" data-id="tab-lenovo-idea-11" data-nombre="Lenovo Idea Tab 11" data-precio="169.00">Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="imagenes/1609-acer-tab-v11-tablet-11-2k-6gb-256gb-20w-8000mah-wifi-ac-and14-funda-champagne-comprar.webp" alt="PC Gaming">
+                <h4>Acer Tab V11 Tablet 11" 2K + Funda</h4>
+                <p class="price">159,99 €</p>
+                <button class="boton-add" data-id="tab-acer-v11" data-nombre="Acer Tab V11 11\" data-precio="159.99">Añadir al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="imagenes/1596-tablet-xiaomi-redmi-pad-2-11-4gb-128gb-wifi-hyperos-verde-menta-ring-holder-7ab85eb1-fe54-428a-9fe8-8090878dc91d.webp" alt="PC Gaming">
+                <h4>Tablet Xiaomi Redmi Pad 2 11"</h4>
+                <p class="price">139 €</p>
+                <button class="boton-add" data-id="tab-xiaomi-redmi-pad2" data-nombre="Xiaomi Redmi Pad 2" data-precio="139.00">Añadir al carrito</button>
+            </div>
+        </div>
     </main>
 
     <footer class="site-footer">
@@ -124,6 +139,17 @@
         </div>
     </div>
 </footer>
-
+<div id="modal-carrito" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Tu Carrito</h2>
+        <div id="lista-carrito"></div>
+        <div class="carrito-total">
+            <p>Total: <strong id="precio-total">0</strong> €</p>
+        </div>
+        <button class="btn-pagar">Finalizar Compra</button>
+    </div>
+</div>
+<script src="carrito.js"></script>
 </body>
 </html>

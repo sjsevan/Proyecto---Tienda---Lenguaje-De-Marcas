@@ -206,3 +206,102 @@ body {
         justify-content: center;
     }
 }
+
+/* ESTILOS DEL CARRITO */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    color: #333;
+    
+    /* Para el scroll */
+    max-height: 85vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* LA LISTA CON SCROLL */
+#lista-carrito {
+    overflow-y: auto; 
+    margin: 15px 0;
+    padding-right: 5px;
+    flex-grow: 1; 
+}
+
+/* Estilo barra de scroll */
+#lista-carrito::-webkit-scrollbar {
+    width: 6px;
+}
+#lista-carrito::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.producto-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-eliminar {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-eliminar:hover {
+    background-color: #ff1a1a;
+}
+
+.carrito-total {
+    margin-top: 10px;
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-top: 2px solid #eee;
+    padding-top: 10px;
+}
+
+.btn-pagar {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
